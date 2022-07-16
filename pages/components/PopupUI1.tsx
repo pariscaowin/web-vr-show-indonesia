@@ -14,6 +14,8 @@ const PopupUI1 = (props:any) => {
     phoneFrame?.remove();
     var iframespan = document.getElementById('iframe1');
     var iframe_html = '<iframe id="phoneFrame1" class="w-full h-full ml-2" src="'+ src +'" ></iframe>';
+    if(iframespan == null)
+      return;
     iframespan.innerHTML = iframe_html;
   });
   return (
