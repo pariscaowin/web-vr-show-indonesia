@@ -7,7 +7,17 @@ const PopupUI5 = (props:any) => {
   const changeShowState = ()=>{
     useStore.setState({ popup: 0 });
   }
-  useEffect(()=>{console.log('popup-index', popUpIndex)},[popUpIndex])
+
+  useEffect(() => {
+    var phoneFrame = document.getElementById('phoneFrame5');
+    phoneFrame?.remove();
+    var iframespan = document.getElementById('iframe5');
+    var iframe_html = '<iframe id="phoneFrame2" class="w-full h-full ml-2" src="'+ src +'"></iframe>';
+    if(iframespan == null)
+      return;
+    iframespan.innerHTML = iframe_html;
+  });
+
   return (
     <>
       <div 
@@ -25,9 +35,11 @@ const PopupUI5 = (props:any) => {
               X
             </button>
 
-            <iframe className="w-full h-full ml-2" name="iframe_4" 
+            <span id="iframe5" className="w-full h-full ml-2" style={{marginRight: '10px'}}>
+              <iframe id="phoneFrame5" className="w-full h-full ml-2" 
               src={src}>
-            </iframe>
+              </iframe>
+            </span>
           </div>
         </div>
       </div>

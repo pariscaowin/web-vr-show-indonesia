@@ -176,7 +176,7 @@ const Home: NextPage = () => {
       <PopupUI2 mode={String(mode)}/>
       <PopupUI3 mode={String(mode)}/>
       <PopupUI4 mode={String(mode)}/>
-      {/* <PopupUI5 mode={String(mode)}/> */}
+      <PopupUI5 mode={String(mode)}/>
       <Loading />
     </main>
   )
